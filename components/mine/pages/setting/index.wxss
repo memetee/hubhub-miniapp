@@ -1,0 +1,47 @@
+.content{
+  margin: 50rpx 20rpx 100rpx;
+  background-color: white;
+}
+.content .set-item {
+  display: flex;
+  padding-right: 20rpx;
+  align-items: center;
+}
+.content .avatar-content {
+  padding-left: 30rpx;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+}
+.content .avatar-content .avatar-wrapper{
+  flex: 1;
+  text-align: right;
+  margin-right: 30rpx;
+}
+.content .set-item .avatar-title{
+  color: #333;
+  font-size: 28rpx;
+}
+.content .set-item .avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.content .set-item .input-name {
+  flex: 1;
+}
+.content .set-item .icon-font {
+  width: 20rpx;
+}
+
+.save-btn{
+  display: block;
+  width: 400rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  border: none;
+  background: #1989fa;
+  color: #fff;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}

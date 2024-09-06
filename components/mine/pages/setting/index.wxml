@@ -1,0 +1,14 @@
+<view class="content">
+  <view class="set-item avatar-content">
+    <text class="avatar-title">头像</text>
+    <view class="avatar-wrapper" bindtap="updateImage">
+      <image class="avatar" src="{{avatar}}"></image>
+    </view>
+    <van-icon class="icon-font" name="arrow" bindtap="updateImage"/>
+  </view>
+  <view class="set-item name-content">
+    <van-field class="input-name" input-align="right" required value="{{ name }}" label="昵称" placeholder="请输入用户名" bind:input="inputUserName"/>
+    <van-icon class="icon-font" name="arrow" />
+  </view>
+</view>
+<button class="save-btn" bindtap="submitChange">保存修改</button>

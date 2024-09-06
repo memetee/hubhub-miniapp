@@ -1,0 +1,3 @@
+.swiper-img-item {
+  height: 100%;
+}

@@ -1,0 +1,18 @@
+<scroll-view bindscrolltolower="onScrollBottom" scroll-y 	lower-threshold="200" class="home-wrap">
+  <swiper bannerList="{{bannerList}}"></swiper>
+  <view class="list-nav">
+    <view class="nav-all" bindtap="controlList" data-item="all">
+      <text>全部</text>
+      <i class="active-all" wx:if="{{activeList === 'all'}}"></i>
+    </view>
+    <view class="nav-hot" bindtap="controlList" data-item="{{'hot'}}">
+      <text>最热</text>
+      <i class="active-hot" wx:if="{{activeList === 'hot'}}"></i>
+    </view>
+  </view>
+  <view class="list">
+    <block wx:for="{{showList}}" wx:key="id">
+      <listItem listItem="{{item}}"></listItem>
+    </block>
+  </view>
+</scroll-view>

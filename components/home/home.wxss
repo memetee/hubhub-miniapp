@@ -1,0 +1,28 @@
+.home-wrap {
+  height: 100%;
+}
+.list-nav {
+  display: flex;
+  font-size: 28rpx;
+}
+
+.list-nav .nav-all, .list-nav .nav-hot{
+  position: relative;
+  margin: 20rpx;
+}
+.list-nav .nav-all .active-all, 
+.list-nav .nav-hot .active-hot{
+  position: absolute;
+  bottom: -12rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50rpx;
+  height: 7rpx;
+  background-color: #d84532;
+  border-radius: 12rpx 12rpx 12rpx 12rpx;
+}
+
+.list{
+  margin: 20rpx;
+  height: 900rpx;
+}

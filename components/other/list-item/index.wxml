@@ -1,0 +1,23 @@
+<view class="list-item">
+  <view class="title">
+    <view class="userInfo">
+      <image class="avatar" src="{{listItem.author.avatarUrl}}"></image>
+      <text class="name">{{listItem.author.name}}</text>
+    </view>
+    <text class="time">{{listItem.createTime}}</text>
+  </view>
+  <view class="content" bindtap="topicItemClick">
+    {{listItem.content}}
+  </view>
+  <view class="footer">
+    <view>
+      <van-tag wx:for="{{listItem.labels}}" round type="warning" class="label-item" wx:key="item">{{item}}</van-tag>
+    </view>
+    <view class="control">
+      <view class="control-item answer" bindtap="topicItemClick">
+        <van-icon name="chat-o" />
+        <text class="number">{{listItem.commentCount}}</text>
+      </view>
+    </view>
+  </view>
+</view>

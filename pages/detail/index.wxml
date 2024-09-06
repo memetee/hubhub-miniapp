@@ -1,0 +1,71 @@
+<scroll-view bindscrolltolower="onScrollBottom" scroll-y lower-threshold="200" class="home-wrap">
+
+
+  <view class="detail-content">
+    <view class="title">
+      <image class="avatar" src="{{detailInfo.author.avatarUrl}}"></image>
+      <view class="user-info">
+        <view class="name">{{detailInfo.author.name}}</view>
+        <view class="time">{{detailInfo.time}}</view>
+      </view>
+    </view>
+    <view class="content-wrap">
+      <view class="content">{{detailInfo.content}}</view>
+      <view class="favorite" bindtap="favoriteMoment">
+        <view>
+          <van-tag round type="warning" wx:for="{{detailInfo.labels}}" class="label-item" wx:key="item">{{item}}</van-tag>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="answer">回复（{{commentInfo.commentCount}}）</view>
+  <view class="detail-answer-list" wx:if="{{commentInfo.commentCount}}">
+    <view class="detail-answer-item" wx:for="{{commentInfo.list}}" wx:key="id">
+      <view class="title">
+        <image class="avatar" src="{{item.author.avatarUrl}}"></image>
+        <text class="name">{{item.author.name}}</text>
+      </view>
+      <view class="content-wrap">
+        <view class="content">{{item.content}}</view>
+        <view class="content-info-control">
+          <view class="content-info">
+            <text class="before-time">{{item.time}}</text>
+            <text class="answer-text" bindtap="replyComment" data-comment="{{item}}" data-commentId="{{item.commentId}}">回复</text>
+          </view>
+        </view>
+        <view class="reply-list">
+          <view class="reply-item" wx:for="{{item.reply}}" wx:key="id">
+            <text class="name">{{item.author.name}}</text>
+            <text class="reply">回复: </text>
+            <text class="content">{{item.content}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+  <view class="input-bottom">
+    <van-field value="{{ commentContent }}" center clearable placeholder="请输入内容" border="{{ false }}" use-button-slot bind:input="changeCommentInput">
+      <van-button slot="button" round size="small" type="primary" bind:tap="submitComment">
+        评论
+      </van-button>
+    </van-field>
+  </view>
+
+<van-popup title="展示弹出层" show="{{ showEditComment }}" position="bottom" round bind:close="onClosePop">
+  <view class="reply-pop-wrap">
+    <view class="reply-pop-title">
+      回复:
+      <text class="reply-content">{{replyComment.content}}</text>
+    </view>
+    <view class="reply-input-wrap">
+      <van-field value="{{ replyContent }}" center clearable placeholder="请输入内容" use-button-slot bind:input="changeReplyInput">
+        <van-button slot="button" round size="small" type="default" bind:tap="submitReply">
+          评论
+        </van-button>
+      </van-field>
+    </view>
+  </view>
+</van-popup>
+<van-notify id="van-notify" />

@@ -1,0 +1,9 @@
+<view class="swiper-body">
+  <swiper indicator-dots="true" autoplay="true" interval="{{5000}}" circular="true">
+    <block wx:for="{{bannerList}}" wx:key="name">
+      <swiper-item>
+        <image style="height: 100%; width: 100%" class="swiper-img-item" model="aspectFill" src="{{item.bannerUrl}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

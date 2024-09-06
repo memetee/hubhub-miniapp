@@ -1,0 +1,23 @@
+<van-cell-group>
+  <van-field
+    value="{{ username }}"
+    required
+    clearable
+    label="用户名"
+    icon="question-o"
+    bind:input="usernameInput"
+    placeholder="请输入用户名"
+    bind:click-icon="onClickIcon"
+  />
+
+  <van-field
+    value="{{ password }}"
+    type="password"
+    bind:input="passwordInput"
+    label="密码"
+    placeholder="请输入密码"
+    required
+    border="{{ false }}"
+  />
+</van-cell-group>
+<button class="publish-btn" bindtap="loginClick">登录</button>

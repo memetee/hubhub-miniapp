@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "swiper": "../other/swiper/index",
+        "listItem": "../other/list-item/index"
+    }
+}

@@ -1,0 +1,50 @@
+.publish-wrap {
+  height: 100vh;
+  background: #eeeeee;
+  padding: 40rpx;
+  font-size: 30rpx;
+  color: #7e7d7d;
+}
+
+.publish-wrap .title {
+    margin-top: 0rpx;
+}
+
+.item-wrap {
+    margin-top: 50rpx;
+}
+.item-wrap .input-s {
+    margin-top: 14rpx;
+}
+
+.must-icon {
+  color: #d84532;
+}
+
+.content .content-textarea{
+  box-sizing: border-box;
+  background: white;
+  padding: 16rpx;
+  width:100%;
+  height: 460rpx;
+  font-size: 26rpx;
+}
+
+.label .label-btn .van-button--default{
+    display: block;
+    text-align: left;
+    border: none;
+    width: 100%;
+}
+
+.tips {
+    font-size: 24rpx;
+    color: #a3a2a2;
+    margin-top: 14rpx;
+}
+
+.publish-btn {
+    margin-top: 20rpx;
+    background-color: rgb(7,193,96);
+    color: white;
+}

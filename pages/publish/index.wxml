@@ -1,0 +1,34 @@
+<view class="publish-wrap">
+  <view class="title item-wrap">
+  </view>
+  <view class="content item-wrap">
+    <text class="must-icon">* </text>请输入内容
+    <textarea type="text"
+      value="{{content}}"
+      bindinput="inputContent"
+      maxlength="-1"
+      class="input-s content-textarea" 
+      placeholder="请输入内容"
+      placeholder-style="#7e7d7d"	/>
+  </view>
+  <view class="label item-wrap">
+    <text class="must-icon">* </text>请选择标签
+    <view class="input-s label-btn">
+        <van-button type="default" bindtap="selectLabel">{{label.name}}</van-button>
+    </view>
+    <van-action-sheet
+      show="{{ showLable }}"
+      actions="{{ actions }}"
+      cancel-text="取消"
+      bind:cancel="closeLabel"
+      bind:close="closeLabel"
+      bind:select="inputLabel"
+    ></van-action-sheet>
+    <view class="tips">
+        <van-icon name="warning" color="#fa4109"/>
+        请勿散播网络谣言、辱骂、虚假信息、色情低俗等违法违规信息！否则将永久封禁
+    </view>
+    <button class="publish-btn" bindtap="publishClick">发布</button>
+  </view>
+</view>
+<van-notify id="van-notify" />

@@ -1,0 +1,22 @@
+<view class="advice-wrap">
+  <view class="content item-wrap">
+    <view class="title">
+      <text class="must-icon">* </text>
+      <text>请留下您的留言</text>
+    </view>
+    <textarea type="text" class="content-textarea" maxlength="500" bindinput="inputContent" placeholder="请输入内容" placeholder-style="#7e7d7d" />
+  </view>
+  <view class="contact item-wrap">
+    <view class="title">
+      <text class="must-icon">* </text>
+      <text>请留下您的联系方式（邮箱或者电话）</text>
+    </view>
+    <input class="input-telephone" bindinput="inputContact" type="text" placeholder="请输入内容" />
+  </view>
+  <view class="tips item-wrap">
+    <van-icon class="icon" name="warning" color="#fa4109" />
+    <text>我们很重视用户的反馈，请务必留下您的联系方式，非常感谢您提出的宝贵意见，我们收到留言后会第一时间联系您</text>
+  </view>
+  <van-button class="publish-btn item-wrap" type="info" size="large" bind:click="subMitAdvice">提交</van-button>
+</view>
+<van-notify id="van-notify" />

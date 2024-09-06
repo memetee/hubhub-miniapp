@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view id="wrap">
+	<view class="body">
+		<home wx:if="{{home === 'footer-home-active'}}"></home>
+		<mine wx:else></mine>
+	</view>
+	<!-- 底部nav -->
+	<view class="footer">
+		<view class="{{'footer-item ' + home}}" bindtap="homeClick">
+			<i></i>
+			<span>首页</span>
+		</view>
+		<view class="footer-item">
+			<image src="/assets/jia.svg" class="footer-increment" bindtap="incrementClick" />
+		</view>
+		<view class="{{'footer-item ' + mine}}" bindtap="mineClick">
+			<i></i>
+			<span>我的</span>
+		</view>
+	</view>
+</view>

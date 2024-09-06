@@ -1,0 +1,15 @@
+<view class="mine-wrap">
+    <view class="header">
+        <view class="avatar-wrap">
+          <image class="avatar" wx:if="{{avatar}}" src="{{avatar}}"></image>
+        </view>
+        <text class="name">{{name}}</text>
+    </view>
+
+    <view class="container">
+        <view class="mine-item" bindtap="goMyDynamic">我的动态</view>
+        <!-- <view class="mine-item" bindtap="goMyFocus">我的关注</view> -->
+        <!-- <view class="mine-item" bindtap="goAdvice">投诉与建议</view> -->
+        <view class="mine-item" bindtap="goSetting">设置</view>
+    </view>
+</view>

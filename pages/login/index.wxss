@@ -1,0 +1,6 @@
+
+.publish-btn {
+  margin-top: 80rpx;
+  background-color: rgb(7,193,96);
+  color: white;
+}

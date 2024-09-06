@@ -1,0 +1,63 @@
+.list-item{
+  padding: 20rpx;
+  background: white;
+  margin-bottom: 15rpx;
+}
+
+.list-item .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item .title .userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.list-item .title .userInfo .avatar{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.list-item .title .userInfo .name{
+  font-size: 28rpx;
+  color: #000;
+}
+
+.list-item .title .time{
+  font-size: 24rpx;
+  color: #cccccc;
+}
+
+.list-item .content {
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  color: rgb(95, 93, 93);
+}
+
+.footer {
+  display: flex;
+  font-size: 26rpx;
+  justify-content: space-between;
+}
+
+.footer .label-item {
+  margin-left: 10rpx;
+}
+.footer .label-item:first-of-type{
+  margin-left: 0;
+}
+
+.footer .control{
+  display: flex;
+}
+.footer .control .control-item {
+  margin-left: 30rpx;
+}
+.footer .number {
+    margin-left: 5rpx;
+    font-size: 26rpx;
+}

@@ -1,0 +1,3 @@
+<view class="my-dynamic">
+  <listItem wx:for="{{mineDynamic.list}}" wx:key="id" listItem="{{item}}"></listItem>
+</view>

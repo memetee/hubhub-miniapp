@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/index",
+    "pages/publish/index",
+    "pages/detail/index",
+    "components/mine/pages/my-dynamic/index",
+    "components/mine/pages/my-focus/index",
+    "components/mine/pages/advice/index",
+    "components/mine/pages/setting/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee"
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
